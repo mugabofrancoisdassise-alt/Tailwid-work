@@ -6,81 +6,127 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-blue-200 min-h-screen justify-center min-h-screen p-4">
-<header class="bg-red-600 text-white px-4 py-3 sticky top-0 z-50 flex items-center gap-12 relative">
 
-  <h1 class="text-xl font-bold">Mpuza</h1>
+<!-- Header with Mobile Menu -->
+<header class="bg-red-600 text-white px-4 py-3 sticky top-0 z-50">
+  <!-- Header top row with logo and hamburger -->
+  <div class="flex items-center justify-between">
+    <h1 class="text-xl font-bold">Mpuza</h1>
+    
+    <!-- Hamburger menu button (visible only on mobile) -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
 
-<div class="flex flex-col items-center">
-  <div class="relative">
-    <i class="fa-solid fa-user-group text-white text-2"></i>
-    <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">
-      10+
-    </sup>
-  </div>
-
-  <a href="#" class="text-white text-sm mt-1">New Network</a>
-</div>
-<div class="flex flex-col items-center gap-1">
-  <div class="relative">
-    <i class="fa-solid fa-folder text-white text-2"></i>
-    <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">
-      2
-    </sup>
-  </div>
-  <a href="#" class="text-white text-sm mt-1">Courses</a>
-</div>
-    <div class="flex flex-col items-center">
+    <!-- Desktop navigation (hidden on mobile) -->
+    <div class="hidden md:flex items-center gap-12">
+      <div class="flex flex-col items-center">
         <div class="relative">
-        <i class="fa-solid fa-bell text-white text-2"></i>
-      <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">7</sup>
+          <i class="fa-solid fa-user-group text-white text-2"></i>
+          <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">10+</sup>
+        </div>
+        <a href="#" class="text-white text-sm mt-1">New Network</a>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <div class="relative">
+          <i class="fa-solid fa-folder text-white text-2"></i>
+          <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">2</sup>
+        </div>
+        <a href="#" class="text-white text-sm mt-1">Courses</a>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="relative">
+          <i class="fa-solid fa-bell text-white text-2"></i>
+          <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">7</sup>
+        </div>
+        <a href="#" class="flex items-center gap-1 mt-1">Notifications</a>
+      </div>
+      <div class="flex flex-col items-center gap-1">
+        <div class="relative">
+          <i class="fa-brands fa-black-tie text-white text-2"></i>
+          <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">9</sup>
+        </div>
+        <a href="#" class="text-white text-sm mt-1">Job Alerts</a>
+      </div>
+      <input type="search" placeholder="Search" class="ml-4 px-2 py-1 rounded text-black text-sm">
+      <div class="ml-4 relative group">
+        <div class="flex flex-col items-center cursor-pointer relative group">
+          <img src="OG profile picture.jpg" class="w-7 h-7 rounded-full">
+          <b class="text-white mt-1 flex items-center gap-1">Me <i class="fa-solid fa-caret-down text-white"></i></b>
+        </div>
+        <div class="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Profile</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
+        </div>
+      </div>
+      <button class="bg-white text-red-600 px-3 py-1 rounded-full text-sm font-semibold ml-4">Become Refresher</button>
+      <div class="ml-4 relative group flex flex-col items-center cursor-pointer">
+        <i class="fa-solid fa-table-cells text-white text-2xl mb-1"></i>
+        <b class="text-white flex items-center gap-1">Switch to <i class="fa-solid fa-caret-down text-white"></i></b>
+        <div class="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity">
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Student</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Teacher</a>
+          <a href="#" class="block px-4 py-2 hover:bg-gray-200">Admin</a>
+        </div>
+      </div>
     </div>
-      <a href="#" class="flex items-center gap-1 mt-1">Notifications</a>
-    </div>
-<div class="flex flex-col items-center gap-1">
-  <div class="relative">
-    <i class="fa-brands fa-black-tie text-white text-2"></i>
-    <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">
-      9
-    </sup>
   </div>
-  <a href="#" class="text-white text-sm mt-1">Job Alerts</a>
-</div>
-  <input type="search" placeholder="Search" class="ml-4 px-2 py-1 rounded text-black text-sm">
-  <div class="ml-4 relative group">
- <div class="flex flex-col items-center cursor-pointer relative group">
-  <img src="OG profile picture.jpg" class="w-7 h-7 rounded-full">
-  <b class="text-white mt-1 flex items-center gap-1">
-    Me <i class="fa-solid fa-caret-down text-white"></i>
-  </b>
-  </div>
-    <div class="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity">
-      <a href="#" class="block px-4 py-2 hover:bg-gray-200">Profile</a>
-      <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
-      <a href="#" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
-    </div>
-  </div>
-  <button class="bg-white text-red-600 px-3 py-1 rounded-full text-sm font-semibold ml-4">
-    Become Refresher
-  </button>
-<div class="ml-4 relative group flex flex-col items-center cursor-pointer">
-  <i class="fa-solid fa-table-cells text-white text-2xl mb-1"></i>
 
-  <b class="text-white flex items-center gap-1">
-    Switch to <i class="fa-solid fa-caret-down text-white"></i>
-  </b>
-  <div class="absolute right-0 mt-2 w-40 bg-white text-black rounded shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity">
-    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Student</a>
-    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Teacher</a>
-    <a href="#" class="block px-4 py-2 hover:bg-gray-200">Admin</a>
+  <!-- Mobile menu dropdown (hidden by default) -->
+  <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-4">
+    <div class="flex flex-wrap items-center gap-4">
+      <div class="flex flex-col items-center">
+        <div class="relative">
+          <i class="fa-solid fa-user-group text-white text-2"></i>
+          <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">10+</sup>
+        </div>
+        <a href="#" class="text-white text-xs mt-1">New Network</a>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="relative">
+          <i class="fa-solid fa-folder text-white text-2"></i>
+          <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">2</sup>
+        </div>
+        <a href="#" class="text-white text-xs mt-1">Courses</a>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="relative">
+          <i class="fa-solid fa-bell text-white text-2"></i>
+          <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">7</sup>
+        </div>
+        <a href="#" class="text-white text-xs mt-1">Notifications</a>
+      </div>
+      <div class="flex flex-col items-center">
+        <div class="relative">
+          <i class="fa-brands fa-black-tie text-white text-2"></i>
+          <sup class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1 rounded-full">9</sup>
+        </div>
+        <a href="#" class="text-white text-xs mt-1">Job Alerts</a>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-4">
+      <input type="search" placeholder="Search" class="px-2 py-1 rounded text-black text-sm flex-grow">
+      <div class="flex flex-col items-center">
+        <img src="OG profile picture.jpg" class="w-7 h-7 rounded-full">
+        <b class="text-white text-xs mt-1">Me</b>
+      </div>
+      <button class="bg-white text-red-600 px-3 py-1 rounded-full text-xs font-semibold">Become Refresher</button>
+      <div class="flex flex-col items-center">
+        <i class="fa-solid fa-table-cells text-white text-xl mb-1"></i>
+        <b class="text-white text-xs">Switch</b>
+      </div>
+    </div>
   </div>
-</div>
-
 </header>
+
 <br>
-<main class="grid grid-cols-12 gap-2">
 
-  <div class="col-span-2 w-full">
-
+<!-- Main Content - Responsive: 1 column on mobile, 12 columns on desktop -->
+<main class="grid grid-cols-1 md:grid-cols-12 gap-2">
+  
+  <!-- Left Sidebar - First on mobile -->
+  <div class="md:col-span-2 w-full order-1">
     <div class="relative">
       <img src="nature.jpg" class="w-full h-24 object-cover">
       <img src="OG profile picture.jpg" class="w-20 h-20 rounded-full absolute left-1/2 -translate-x-1/2 -bottom-10">
@@ -98,17 +144,14 @@
         <span><i class="fa-solid fa-eye text-blue-500"></i> My profile viewers</span>
         <a href="#" class="text-blue-500">68</a>
       </div>
-
       <div class="flex justify-between">
         <span><i class="fa-solid fa-briefcase text-blue-500"></i> Job applications</span>
         <a href="#" class="text-blue-500">13</a>
       </div>
-
       <div class="flex justify-between">
         <span><i class="fa-solid fa-comments-dollar text-blue-500"></i> Interviews</span>
         <a href="#" class="text-blue-500">10</a>
       </div>
-
       <div class="flex justify-between">
         <span><i class="fa-solid fa-star text-blue-500"></i> Saved favorites</span>
         <a href="#" class="text-blue-500">21</a>
@@ -131,108 +174,100 @@
             <span><i class="fa-solid fa-eye text-blue-500"></i> Page visitors</span>
             <a href="#" class="text-blue-500">99</a>
           </div>
-
           <div class="flex justify-between">
             <span><i class="fa-solid fa-user-check text-blue-500"></i> Followers</span>
             <a href="#" class="text-blue-500">47</a>
           </div>
-
           <div class="flex justify-between">
-    <span>
-        <i class="fa-solid fa-map-location text-blue-500"></i> Interested
-    </span>
-    <a href="#" class="text-blue-500">11</a>
-</div>
+            <span><i class="fa-solid fa-map-location text-blue-500"></i> Interested</span>
+            <a href="#" class="text-blue-500">11</a>
+          </div>
 
-<h3 class="font-bold mt-6 mb-3">Professional Group</h3>
-
-<div>
-    <span>
-       <a href="#"><i class="fa-solid fa-users text-blue-500"></i> Create new group</a>
-    </span>
-</div>
-
+          <h3 class="font-bold mt-6 mb-3">Professional Group</h3>
+          <div>
+            <span><a href="#"><i class="fa-solid fa-users text-blue-500"></i> Create new group</a></span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="col-span-5 w-full">
-<div class="bg-white h-10 flex items-center justify-between px-4">
-    <h2 class="text-xl font-bold">Home</h2>
-    <i class="fa-solid fa-star-half-stroke text-blue-500 text-lg"></i>
-</div> <br>
-<div class="bg-white">
-    <div class="flex items-center gap-3 mb-4">
-      <img src="OG profile picture.jpg" class="w-12 h-12 rounded-full">
-      <input type="text"
-             placeholder="I have a job, I can post to support jobless..."
-             class="px-4 py-2 w-full">
+  <!-- Middle Column - Second on mobile -->
+  <div class="md:col-span-5 w-full order-2">
+    <div class="bg-white h-10 flex items-center justify-between px-4">
+      <h2 class="text-xl font-bold">Home</h2>
+      <i class="fa-solid fa-star-half-stroke text-blue-500 text-lg"></i>
+    </div> 
+    <br>
+    
+    <div class="bg-white">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="OG profile picture.jpg" class="w-12 h-12 rounded-full">
+        <input type="text" placeholder="I have a job, I can post to support jobless..." class="px-4 py-2 w-full">
+      </div>
+      <br>
+      <div class="text-center">
+        <span class="text-blue-500"><a href="#"><i class="fa-solid fa-earth-asia"></i> Your followers<i class="fa-solid fa-caret-down"></i></a></span>
+        <hr class="my-2">
+        <i class="fa-solid fa-photo-film text-blue-500 px-2 py-3"></i>
+        <span class="text-blue-500 font-bold px-7"><i class="fa-solid fa-circle-half-stroke text-blue-500"></i> US$ 99.99 <i class="fa-solid fa-caret-down"></i></span>
+        <button class="bg-blue-500 text-white px-10 py-1 rounded-full">Post</button>
+        <span class="text-blue-500 font-bold px-10">16,000 jobless</span>
+      </div>
     </div>
     <br>
-    <div class="text-center">
-<span class="text-blue-500"><a href="#"><i class="fa-solid fa-earth-asia"></i>
-  Your followers<i class="fa-solid fa-caret-down"></i></a></span>
-    <hr class="my-2">
-    <i class="fa-solid fa-photo-film text-blue-500 px-2 py-3"></i>
-    <span class="text-blue-500 font-bold px-7">
-          <i class="fa-solid fa-circle-half-stroke text-blue-500"></i>
-    US$ 99.99 <i class="fa-solid fa-caret-down"></i></span>
-        <button class="bg-blue-500 text-white px-10 py-1 rounded-full">
-      Post
-    </button>
-    <span class="text-blue-500 font-bold px-10">16,000 jobless</span>
-</div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 w-100">
+      <div class="job-card bg-white rounded text-center h-70">
+        <div class="flex flex-col items-center justify-center">
+          <img src="airtel1.jpg" class="w-20">
+          <span class="font-bold">Airtel Rwanda <i class="fa-solid fa-circle-check text-blue-500"></i></span>
         </div>
-        <br>
- <div class="grid grid-cols-1 md:grid-cols-3 gap-3 w-100">
-    <div class="job-card bg-white rounded text-center h-70">
-<div class="flex flex-col items-center justify-center">
-    <img src="airtel1.jpg" class="w-20">
-    <span class="font-bold">Airtel Rwanda <i class="fa-solid fa-circle-check text-blue-500"></i></span>
-</div>
-      <div class="p-5 flex-1 flex flex-col">
-        <b class="font-semibold text-sm">Network & System Administrator</b>
-        <span class="text-xs"> Bachelor Degree in Software Engineering</span>
-        <button class="bg-blue-500 text-white py-1 rounded-full text-xs">Urgent Hiring!</button>
+        <div class="p-5 flex-1 flex flex-col">
+          <b class="font-semibold text-sm">Network & System Administrator</b>
+          <span class="text-xs"> Bachelor Degree in Software Engineering</span>
+          <button class="bg-blue-500 text-white py-1 rounded-full text-xs">Urgent Hiring!</button>
+        </div>
       </div>
+      
+      <div class="job-card bg-white rounded text-center h-70">
+        <div class="flex flex-col items-center justify-center">
+          <img src="twap.jpg" class="0w-2">
+          <span class="font-bold">Twapela <i class="fa-solid fa-circle-check text-blue-500"></i></span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <b class="font-semibold text-sm">Machine learning engineer</b>
+          <span class="text-xs"> Bachelor Degree in Software Engineering</span>
+          <button class="bg-blue-500 text-white py-1 rounded-full text-xs">Urgent Hiring!</button>
+        </div>
       </div>
-          <div class="job-card bg-white rounded text-center h-70">
-<div class="flex flex-col items-center justify-center">
-    <img src="twap.jpg" class="0w-2">
-    <span class="font-bold">Twapela <i class="fa-solid fa-circle-check text-blue-500"></i></span>
-</div>
-      <div class="p-5 flex-1 flex flex-col">
-        <b class="font-semibold text-sm">Machine learning engineer</b>
-        <span class="text-xs"> Bachelor Degree in Software Engineering</span>
-        <button class="bg-blue-500 text-white py-1 rounded-full text-xs">Urgent Hiring!</button>
-      </div>
-      </div>
-          <div class="job-card bg-white rounded text-center h-70">
-<div class="flex flex-col items-center justify-center">
-    <img src="mpuz.jpg" class="w-20">
-    <span class="font-bold">Mpuza Inc. <i class="fa-solid fa-circle-check text-blue-500"></i></span>
-</div>
-      <div class="p-5 flex-1 flex flex-col">
-        <b class="font-semibold text-sm">Legal officer</b>
-        <span class="text-xs"> Bachelor Degree in Software Engineering</span>
-        <br>
-        <button class="bg-blue-500 text-white py-1 rounded-full text-xs">Urgent Hiring!</button>
-      </div>
+      
+      <div class="job-card bg-white rounded text-center h-70">
+        <div class="flex flex-col items-center justify-center">
+          <img src="mpuz.jpg" class="w-20">
+          <span class="font-bold">Mpuza Inc. <i class="fa-solid fa-circle-check text-blue-500"></i></span>
+        </div>
+        <div class="p-5 flex-1 flex flex-col">
+          <b class="font-semibold text-sm">Legal officer</b>
+          <span class="text-xs"> Bachelor Degree in Software Engineering</span>
+          <br>
+          <button class="bg-blue-500 text-white py-1 rounded-full text-xs">Urgent Hiring!</button>
+        </div>
       </div>
     </div>
-<br>
- <div class="bg-white rounded shadow-md p-5">
+    <br>
+    
+    <div class="bg-white rounded shadow-md p-5">
       <div class="flex justify-between">
         <div class="w-32 h-5 bg-blue-500 rounded-2xl"></div>
-        <div class=" text-center">
-         <ul class="list-disc">
-          <br>
-          <li>3 Vacant Positions</li>
-          <li>1 Year of Experience</li>
-          <li></li>
-         </ul> 
-        </div><div></div><div></div><div></div>
+        <div class="text-center">
+          <ul class="list-disc">
+            <br>
+            <li>3 Vacant Positions</li>
+            <li>1 Year of Experience</li>
+            <li></li>
+          </ul> 
+        </div>
         <span class="float-right"><a href="#"><i class="fa-solid fa-user-plus text-blue-500"></i>Follow</a></span>
       </div>
 
@@ -250,36 +285,29 @@
           <span class="text-[12px] font-semibold">Minutes</span>
         </div>
       </div>
-<br>
+      <br>
+      
       <div class="flex mt-6 pt-4 border-t gap-3 border-gray-200/80 justify-between">
         <i class="fa-solid fa-heart text-red-500"></i>
-        <div class="flex items-center gap-1">
-          <i class="fa-regular fa-message"></i>
-          <span>Comment</span>
-        </div>
-        <div class="flex items-center gap-1">
-          <span class="text-[20px] leading-none"><i class="fa-solid fa-share"></i></span>
-          <span>Share</span>
-        </div>
-        <div class="flex items-center gap-1">
-          <span class="text-[20px] leading-none"><i class="fa-regular fa-star"></i></span>
-          <span>Favourite</span>
-        </div>
+        <div class="flex items-center gap-1"><i class="fa-regular fa-message"></i><span>Comment</span></div>
+        <div class="flex items-center gap-1"><span class="text-[20px] leading-none"><i class="fa-solid fa-share"></i></span><span>Share</span></div>
+        <div class="flex items-center gap-1"><span class="text-[20px] leading-none"><i class="fa-regular fa-star"></i></span><span>Favourite</span></div>
       </div>
-  </div>
-  <br>
-   <div class="bg-white rounded shadow-md p-5">
+    </div>
+    <br>
+    
+    <div class="bg-white rounded shadow-md p-5">
       <div class="flex justify-between">
         <div><img src="Screenshot 2026-02-13 142533.jpg"></div>
-        <div class=" text-center">
+        <div class="text-center">
           One Acre fund <i class="fa-solid fa-circle-check text-blue-500"></i>
-         <ul class="list-disc">
-          <br>
-          <li>3 Vacant Positions</li>
-          <li>1 Year of Experience</li>
-          <li>Bacheral  degree in  <br>insoftware</li>
-         </ul> 
-        </div><div></div><div></div><div></div>
+          <ul class="list-disc">
+            <br>
+            <li>3 Vacant Positions</li>
+            <li>1 Year of Experience</li>
+            <li>Bacheral degree in <br>insoftware</li>
+          </ul> 
+        </div>
         <span class="float-right"><a href="#"><i class="fa-solid fa-user-plus text-blue-500"></i>Follow</a></span>
       </div>
 
@@ -297,71 +325,55 @@
           <span class="text-[12px] font-semibold">Minutes</span>
         </div>
       </div>
-<br>
+      <br>
+      
       <div class="flex mt-6 pt-4 border-t gap-3 border-gray-200/80 justify-between">
         <i class="fa-solid fa-heart text-red-500"></i>
-        <div class="flex items-center gap-1">
-          <i class="fa-regular fa-message"></i>
-          <span>Comment</span>
-        </div>
-        <div class="flex items-center gap-1">
-          <span class="text-[20px] leading-none"><i class="fa-solid fa-share"></i></span>
-          <span>Share</span>
-        </div>
-        <div class="flex items-center gap-1">
-          <span class="text-[20px] leading-none"><i class="fa-regular fa-star"></i></span>
-          <span>Favourite</span>
-        </div>
+        <div class="flex items-center gap-1"><i class="fa-regular fa-message"></i><span>Comment</span></div>
+        <div class="flex items-center gap-1"><span class="text-[20px] leading-none"><i class="fa-solid fa-share"></i></span><span>Share</span></div>
+        <div class="flex items-center gap-1"><span class="text-[20px] leading-none"><i class="fa-regular fa-star"></i></span><span>Favourite</span></div>
       </div>
-  </div>
+    </div>
   </div>
 
-  <div class="col-span-5">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-    <div class="flex flex-col items-center text-center bg-white p-4 rounded min-h-[300px]">
+  <!-- Right Sidebar - Third on mobile -->
+  <div class="md:col-span-5 w-full order-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div class="flex flex-col items-center text-center bg-white p-4 rounded min-h-[300px]">
         <img src="OG profile picture.jpg" class="w-40 h-50 object-cover rounded-full mb-2">
         <br><br>
         <p class="text-red-300">We appreciate your generosity !</p>
-    </div>
-    <div class="bg-white text-center rounded-t-lg min-h-[300px]">
-    <div class="rounded-lg [box-shadow:0_7px_5px_-6px_rgba(37,99,235,0.5)]">
-        <div class="bg-blue-500 rounded-t-lg">
+      </div>
+      
+      <div class="bg-white text-center rounded-t-lg min-h-[300px]">
+        <div class="rounded-lg [box-shadow:0_7px_5px_-6px_rgba(37,99,235,0.5)]">
+          <div class="bg-blue-500 rounded-t-lg">
             <h3 class="font-bold text-lg text-white"><i class="fa-solid fa-star text-white"></i> Favorited Jobs</h3>
-        </div>
-        <br>
-            <p class="text-sm text-gray-600">
-                Click icon on interested jobs  <b>Favolite icon</b><br>To save it here to enable quick access
-            </p>
-            <br>
           </div>
-<div class="mt-4 text-center bg-violet-100">
-  <br><br>
-    <img src="man.jpg" class="w-200 h-auto inline-block">
-    <br>. 
-</div>
+          <br>
+          <p class="text-sm text-gray-600">Click icon on interested jobs <b>Favolite icon</b><br>To save it here to enable quick access</p>
+          <br>
+        </div>
+        <div class="mt-4 text-center bg-violet-100">
+          <br><br>
+          <img src="man.jpg" class="w-200 h-auto inline-block">
+          <br>. 
+        </div>
+      </div>
     </div>
-</div>
-  <br>
-  <div class="bg-white rounded min-h-[220px]">
     <br>
-<div class="flex items-center gap-4 bg-white p-4 rounded-lg">
-    <div>
-        <img src="airtel1.jpg" class="w-20 h-auto">
-    </div>
-    <div class="flex-1">
-        Airtel Rwanda <br>
-        <b>Network</b> & <b>System</b> Administrator [Full-time]
-        Telecommunication
-    </div>
-    <div>
-        <button class="flex items-center justify-center">
-            X
-        </button>
-    </div>
-</div>
-<br>
-          <div class="flex gap-[22px] float-right">
-          <mark class="p-2 bg-red-200 rounded"><i class="fa-regular fa-star p-1"></i></mark>
+    
+    <div class="bg-white rounded min-h-[220px]">
+      <br>
+      <div class="flex items-center gap-4 bg-white p-4 rounded-lg">
+        <div><img src="airtel1.jpg" class="w-20 h-auto"></div>
+        <div class="flex-1">Airtel Rwanda <br><b>Network</b> & <b>System</b> Administrator [Full-time] Telecommunication</div>
+        <div><button class="flex items-center justify-center">X</button></div>
+      </div>
+      <br>
+      
+      <div class="flex gap-[22px] float-right">
+        <mark class="p-2 bg-red-200 rounded"><i class="fa-regular fa-star p-1"></i></mark>
         <div class="flex flex-col">
           <span class="text-red-500 leading-none">04</span>
           <span class="text-[12px] font-semibold">Days</span>
@@ -374,38 +386,55 @@
           <span class="text-red-500 leading-none">44</span>
           <span class="text-[12px] font-semibold">Minutes</span>
         </div>
-        <div></div>
       </div>
-  </div>
-  <br>
-      <div class="bg-white rounded shadow-md p-6">
-        <h3 class="text-lg font-bold pb-2 gap-2"> Job Description </h3>
-        <p class="text-gray-700">
-          This job will be based on <span class="font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-        </p>
-        <div class="mt-5">
-         <span class="font-bold text-gray-800">Direct Supervisor</span>
-         <ul class="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
+    </div>
+    <br>
+    
+    <div class="bg-white rounded shadow-md p-6">
+      <h3 class="text-lg font-bold pb-2 gap-2">Job Description</h3>
+      <p class="text-gray-700">This job will be based on <span class="font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span></p>
+      <div class="mt-5">
+        <span class="font-bold text-gray-800">Direct Supervisor</span>
+        <ul class="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
           <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          </ul>
-          <span class="font-bold text-gray-800">Duties and Responsibilities</span>
-          <ul class="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          </ul>
-          <span class="font-bold text-gray-800">Qualifications</span>
-          <p class="text-sm text-gray-700 mt-1">• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <span class="font-bold text-gray-800">Experience</span>
-          <p class="text-sm text-gray-700 mt-1">• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <span class="font-bold text-gray-800">Certificate</span>
-          <p class="text-sm text-gray-700 mt-1">• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
-        </div>
-        </div>
-
+        </ul>
+        <span class="font-bold text-gray-800">Duties and Responsibilities</span>
+        <ul class="list-disc list-inside text-sm text-gray-700 mt-2 space-y-1">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+        <span class="font-bold text-gray-800">Qualifications</span>
+        <p class="text-sm text-gray-700 mt-1">• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span class="font-bold text-gray-800">Experience</span>
+        <p class="text-sm text-gray-700 mt-1">• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <span class="font-bold text-gray-800">Certificate</span>
+        <p class="text-sm text-gray-700 mt-1">• Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> 
+      </div>
+    </div>
   </div>
 
 </main>
+
+<!-- Simple JavaScript for Mobile Menu -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      
+      // Toggle icon
+      const icon = this.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.className = 'fa-solid fa-bars';
+      } else {
+        icon.className = 'fa-solid fa-times';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
